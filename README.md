@@ -144,3 +144,4 @@ git clone https://github.com/QMUI/QMUI_iOS_CodeSnippets.git ./
 - `__strongSelf` - 将 `weakSelf` 指针改为 `strong` 的 `self` 指针
 - `logCallStackSymbols` - 用 `NSLog` 打出当前的方法调用栈信息
 - `timeConsuming` - 展开一段用 `CACurrentMediaTime()` 来计算方法耗时的代码
+# CodeSnippets

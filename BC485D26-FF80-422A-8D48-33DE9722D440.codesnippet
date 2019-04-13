@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>singleton</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>static id _instance;
++(instancetype)share&lt;#className#&gt;{
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        _instance = [[self alloc]init];
+    });
+    return _instance;
+}
+
+- (id)copyWithZone:(NSZone *)zone{
+    return _instance;
+}
++ (instancetype)allocWithZone:(struct _NSZone *)zone{
+    static dispatch_once_t onceToken;
+    dispatch_once(&amp;onceToken, ^{
+        _instance = [super allocWithZone:zone];
+    });
+    return _instance;
+}
+#pragma mark - MRC环境的适配：重写
+/*
+ Decrements the receiver’s reference count.
+ The receiver is sent a dealloc message when its reference count reaches 0.
+ */
+#if !__has_feature(objc_arc)
+- (oneway void)release{
+}
+- (instancetype)retain{
+    return self;
+}
+- (NSUInteger)retainCount{
+    return 1;
+}
+- (instancetype)autorelease{
+    return self;
+}
+#endif
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BC485D26-FF80-422A-8D48-33DE9722D440</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>非ARC单例模式</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

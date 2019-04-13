@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_HeaderDocMethod</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ @method &lt;#myMethod:withTwoParameters:#&gt;
+ @abstract &lt;#A short description for the QuickHelp popover#&gt;
+ @description &lt;#A longer description for the QuickHelp pane#&gt;
+ @param &lt;#param#&gt; &lt;#param description#&gt;
+ @param &lt;#param#&gt; &lt;#param description#&gt;
+ @return &lt;#Description for the return value#&gt;
+ */
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A2E25621-44B5-4E40-9209-73F848845BCA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetSummary</key>
+	<string> 方法的文档注释</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>documenting a method</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

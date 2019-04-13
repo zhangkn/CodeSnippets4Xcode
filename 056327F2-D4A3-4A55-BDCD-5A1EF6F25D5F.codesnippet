@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>initModelInterface</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassInterfaceMethods</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ 提供类方法，返回数据模型数组--工厂模式
+ */
++ (NSArray *) &lt;#list#&gt;;
+//定义初始化方法 KVC的使用
+- (instancetype) initWithDictionary:(NSDictionary *) dict;
++ (instancetype) &lt;#name#&gt;WithDictionary:(NSDictionary *) dict;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>056327F2-D4A3-4A55-BDCD-5A1EF6F25D5F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C-Plus-Plus</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>初始化模型接口</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
