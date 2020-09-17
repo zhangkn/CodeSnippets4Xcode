@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_day</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        NSDate *date = [QCT_Common dateWithFormatterString:self.viewModel.model.receiptTime  dateFormat:@"yyyy-MM-dd HH:mm:ss"];// 去掉
+        
+        
+        NSDateFormatter *dateFormtter=[[NSDateFormatter alloc] init];
+        [dateFormtter setDateFormat:@"yyyy-MM-dd"];
+        NSString *dateString=[dateFormtter stringFromDate: date];
+        
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8D1514AA-3A9D-476E-96C0-7FD717FF368B</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>kn_day</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>kn_day</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

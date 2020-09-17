@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_vcView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (&lt;##&gt; *)vcView{
+    if (!_vcView) {
+        
+        
+        &lt;##&gt; *tmp = [[&lt;##&gt; alloc] initWithViewModel:self.viewModel];
+        _vcView= tmp;
+        
+        __weak __typeof__(self) weakSelf = self;
+        
+        [self.view addSubview:_vcView];
+        
+        [_vcView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(weakSelf.view);
+        }];
+    }
+    return _vcView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>89013204-0EFE-4827-B52E-116CC6284CAA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>vcView</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vcVew</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

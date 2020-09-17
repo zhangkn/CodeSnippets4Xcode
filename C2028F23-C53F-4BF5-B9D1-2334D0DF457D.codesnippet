@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_POST_CRM</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        NSString *getURL = k_API_PurchaseOrder_CreatePurchaseOrder;
+        
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        
+        [params setValue:@"1" forKey:@"State"];
+        
+        // purchaseOrderDto + 设备数组
+        
+        
+        
+        
+        [QCTNetworkHelper Post:getURL parameters:params success:^(id  _Nonnull responseObj) {
+            NSLog(@"k_API_PurchaseOrder_CreatePurchaseOrder %@",responseObj);
+            
+            
+            
+            NSMutableArray *tmparr = responseObj[@"data"];
+            
+            
+            
+        } failure:nil bizFailure:nil isShowLoadingDataGif:YES];
+        
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C2028F23-C53F-4BF5-B9D1-2334D0DF457D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_POST_CRM</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_POST_CRM</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

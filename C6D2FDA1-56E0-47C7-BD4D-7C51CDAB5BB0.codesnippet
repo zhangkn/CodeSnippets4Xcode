@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_description</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (NSString *)description{
+    
+    return [ NSString stringWithFormat:@"%@ ：\n%@",super.description,[[NSString alloc] initWithData: [NSJSONSerialization dataWithJSONObject:self.mj_keyValues options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding]];
+    
+    //    return [ NSString stringWithFormat:@"%@ ：\n%@",super.description,[QCTNetworkHelper convertToJsonData:self.mj_keyValues ]];
+    
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C6D2FDA1-56E0-47C7-BD4D-7C51CDAB5BB0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_description</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_description</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

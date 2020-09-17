@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_tap</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        UITapGestureRecognizer *cutTap = [[UITapGestureRecognizer alloc] init];
+        [[cutTap rac_gestureSignal] subscribeNext:^(id x) {
+            
+            
+            NSLog(@" cutTap 点击了 ");
+            
+            if ( self.models.block) {
+                self.models.block(self);
+            }
+            
+            
+        }];
+        [self addGestureRecognizer:cutTap];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>679B5BD2-B669-4F21-B1AE-A35C2DD24AD8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>手势点击事件</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_tap</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

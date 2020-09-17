@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_lineView</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UILabel *)lineLab{
+    if (nil == _lineLab) {
+        UILabel *tmpView = [[UILabel alloc]init];
+        _lineLab = tmpView;
+        [self addSubview:_lineLab];
+        tmpView.backgroundColor = k_tableView_Line;
+        
+        __weak __typeof__(self) weakSelf = self;
+        [_lineLab mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.height.mas_equalTo(LineH);
+            
+            make.left.equalTo(weakSelf).offset(kAdjustRatio(0));
+            make.right.equalTo(weakSelf).offset(kAdjustRatio(-0));
+            make.bottom.equalTo(weakSelf);
+        }];
+        
+    }
+    return _lineLab;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FE8FCEC9-FA7C-43DE-8052-2A7C72BD98A3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_lineV</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

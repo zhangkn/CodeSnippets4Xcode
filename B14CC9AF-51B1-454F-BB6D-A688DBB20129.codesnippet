@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:QCTLocal(@"Browse") style:UIBarButtonItemStyleDone target:self action:@selector(saveImage)];
+
+    
+    NSDictionary *dic = [NSDictionary dictionaryWithObject:rgb(51, 51, 51) forKey:NSForegroundColorAttributeName];
+    
+    // 默认白色
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:dic forState:UIControlStateNormal];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B14CC9AF-51B1-454F-BB6D-A688DBB20129</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_Right_Nav_Item</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

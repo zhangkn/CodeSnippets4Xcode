@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_cellH</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@property (nonatomic, copy) void (^block)(id sender);
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView   block:(void (^)(id sender))block  models:(id) models ;
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView;
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3B9B9F9F-7DA7-4BEE-9C9D-C9EA01445665</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>cell 的通用头文件</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_cellh</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

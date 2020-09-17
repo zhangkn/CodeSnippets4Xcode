@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_MJ_Arr</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>+ (NSDictionary *)mj_objectClassInArray{
+    
+    return  @{@"purchaseOrderDetailDtos":@"QCTpurchaseOrderDetailDtos"};
+
+    
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9258E42F-2049-4718-9062-F7B67EB7ADF3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_MJ_Arr</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_MJ_Arr</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

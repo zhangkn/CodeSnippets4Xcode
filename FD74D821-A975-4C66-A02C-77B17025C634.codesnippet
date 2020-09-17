@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_Post</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSString *post = [NSString stringWithFormat:@"%@%@",currentHost,k_API_Member_BindingMemberShipCard];
+    
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [params setValue:self.viewModel.model.id forKey:@"memberId"];
+    
+    
+    [params setValue:self.viewModel.cardInfoViewModel.cardNo forKey:@"cardNo"];
+    
+    
+    
+    [QCTNetworkHelper Post:post parameters:params success:^(id  _Nonnull responseObj) {
+        NSLog(@"k_API_Member_BindingMemberShipCard %@",responseObj);
+        
+        
+        // 绑定成功
+        
+        [LBAlertController showAlertTitle:nil content:responseObj[GYQmessage] cancelString:nil cancleBlock:^{
+            
+        }
+                               sureString:@"确定" sureBlock:^{
+                                   
+                                   
+                                   // 回到详情界面
+                                   
+                                   [self.viewModel.backVCSubject sendNext:nil];
+                                   
+                               }
+                        currentController:[QCT_Common getCurrentVC]];
+        
+        
+        
+        
+
+        
+        
+        
+        
+    } failure:nil bizFailure:nil isShowLoadingDataGif:YES];
+    
+    
+    
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FD74D821-A975-4C66-A02C-77B17025C634</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_Post</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_Post</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

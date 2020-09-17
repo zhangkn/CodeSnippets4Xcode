@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_vModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (&lt;##&gt; *)viewModel{
+    
+    if (_viewModel == nil) {
+        _viewModel = [&lt;##&gt; new];
+        
+        
+    }
+    return _viewModel;
+    
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5CF4ED2A-1374-4185-9FCF-B8BB1C1BAB0D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>vmodel</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>vmodel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

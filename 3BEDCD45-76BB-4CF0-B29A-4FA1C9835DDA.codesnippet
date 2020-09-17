@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_isProxy</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark ——— 防代理
+- (BOOL)getProxyStatusWithURL:(NSString *)url {
+    NSDictionary *proxySettings =  (__bridge_transfer NSDictionary *)(CFNetworkCopySystemProxySettings());
+    NSArray *proxies = (__bridge_transfer NSArray *)(CFNetworkCopyProxiesForURL((__bridge CFURLRef _Nonnull)([NSURL URLWithString:url]), (__bridge CFDictionaryRef _Nonnull)(proxySettings)));
+    NSDictionary *settings = [proxies objectAtIndex:0];
+    
+    NSLog(@"host=%@", [settings objectForKey:(NSString *)kCFProxyHostNameKey]);
+    NSLog(@"port=%@", [settings objectForKey:(NSString *)kCFProxyPortNumberKey]);
+    NSLog(@"type=%@", [settings objectForKey:(NSString *)kCFProxyTypeKey]);
+    //2019-10-11 22:28:29.993974+0800 ShopList[5912:810446] type=kCFProxyTypeHTTPS
+
+    if ([[settings objectForKey:(NSString *)kCFProxyTypeKey] isEqualToString:@"kCFProxyTypeNone"]){
+        //没有设置代理
+        return NO;
+    }else{
+        //设置代理了
+        return YES;
+    }
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3BEDCD45-76BB-4CF0-B29A-4FA1C9835DDA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>isProxy</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>kn_isProxy</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

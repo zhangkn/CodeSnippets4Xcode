@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_Page</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    
+    if (self.viewModel.cardInfoViewModels.count == 0) {
+        [self.viewModel.ShowNoviewSubject sendNext:@"暂无数据~"];
+    }else{
+        [self.viewModel.hidenNoviewSubject sendNext:@"暂无数据~"];
+        
+    }
+
+    
+    
+    
+    
+    NSString *post = [NSString stringWithFormat:@"%@%@",currentHost,k_API_MemberShipCard_GetMemberShipCardList];
+    
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [params setValue:self.viewModel.model.id forKey:@"memberId"];
+    
+    
+    // 默认先请求第一页
+//    page = 1;
+//    pageCount = 1;
+//    pageSize = 10;
+//    totalCount = 8;
+
+    
+    //    page    integer($int32)
+    [params setValue:[[NSNumber numberWithInteger:self.viewModel.paramsModel.PageNum]description] forKey:@"page"];//self.viewModel.paramsModel.PageNum
+    [params setValue:@"10" forKey:@"pageSize"];
+    
+
+    
+    
+//    [params setValue:self.viewModel.cardInfoViewModel.cardNo forKey:@"cardNo"];
+    
+    //    memberId = 1157207781053435904;
+
+    
+    [QCTNetworkHelper Post:post parameters:params success:^(id  _Nonnull responseObj) {
+        NSLog(@"k_API_MemberShipCard_GetMemberShipCardList %@",responseObj);
+        
+        
+        // 绑定成功
+        
+        
+//        self.viewModel.cardInfoViewModels = [QCTCardInfoViewModel getQCTCardInfoViewModels];
+        
+        
+//        self.viewModel.cardInfoViewModels = [QCTCardInfoViewModel mj_objectWithKeyValues:responseObj[@"data"]];
+        
+        self.viewModel.cardInfoViewModels = [QCTCardInfoViewModel mj_objectArrayWithKeyValuesArray:responseObj[@"data"][@"data"]];
+
+#pragma mark - ******** todo // 追加数据
+        
+        //        __weak __typeof__(self) weakSelf = self;
+//        [weakSelf.viewModel.reloadSubject sendNext:nil];
+//        weakSelf.vcView.isfoldGoods =  !weakSelf.vcView.isfoldGoods;
+        
+        [self setupflod];
+        
+
+        [self.viewModel.reloadSubject sendNext:nil];
+        
+        
+        //        self.viewModel.paramsModel.PageNum++;// 如果没有数据记得页数减下来回来
+        //        page = 1;
+
+        self.viewModel.paramsModel.PageNum = [responseObj[@"data"][@"page"] integerValue];
+        
+        
+        
+        if (self.viewModel.cardInfoViewModels.count == 0) {
+            [self.viewModel.ShowNoviewSubject sendNext:@"暂无数据~"];
+        }else{
+            [self.viewModel.hidenNoviewSubject sendNext:@"暂无数据~"];
+            
+        }
+        
+
+        
+        
+        
+    }
+                   failure:^(NSError * _Nonnull error) {
+                       UIAlertView *al = [[UIAlertView alloc]initWithTitle:@"" message:@"加载失败 请稍后重试" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                       
+                       
+                       [al show];
+                       
+                       
+                       
+                       
+                       [self.viewModel.endRefreshSubject sendNext:nil ];
+                       
+                       
+                   } bizFailure:^(id  _Nonnull responseObj) {
+                       
+                       
+                       UIAlertView *al = [[UIAlertView alloc]initWithTitle:@"" message:responseObj[@"message"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                       
+                       
+                       [al show];
+                       
+                       [self.viewModel.endRefreshSubject sendNext:nil ];
+                       
+                   } isShowLoadingDataGif:YES];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>61F48D6D-FCDC-4244-B04A-C0127CE53470</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_Page</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_Page</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

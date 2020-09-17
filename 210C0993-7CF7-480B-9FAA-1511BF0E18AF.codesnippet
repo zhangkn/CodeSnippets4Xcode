@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_isEN</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>            if([HZLanguageManager defaultManager].currentLanguage == HZLanguageTypeEnglish ){
+                make.width.mas_equalTo(kAdjustRatio(73 * 3));
+
+            }else{
+                make.width.mas_equalTo(kAdjustRatio(50 * 3));
+
+            }
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>210C0993-7CF7-480B-9FAA-1511BF0E18AF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_isEN</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_isEN</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

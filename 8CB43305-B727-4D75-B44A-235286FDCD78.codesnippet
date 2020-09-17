@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_head_tV</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    
+    if (section == QCTReceiptsubFilterViewSection4Time) {
+        return kAdjustRatio(50);
+        
+    }
+    return 0;
+}
+
+/**
+ tableViewSectionHeader 字体及背景色设置
+ */
+-(void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section{
+    
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    
+    header.textLabel.textColor = rgb(51,51,51);
+    header.textLabel.font = kPingFangFont(15);
+    
+    header.contentView.backgroundColor = [UIColor whiteColor];
+    
+    
+    
+}
+
+- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (QCTReceiptsubFilterViewSection4Time == section) {
+        return @"统计周期";
+    }
+    return nil;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8CB43305-B727-4D75-B44A-235286FDCD78</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN——head</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_initWithViewModel</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (instancetype)initWithFrame:(CGRect)frame {
+    return [self initWithFrame:frame ViewModel:nil];
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    return [self initWithFrame:CGRectZero ViewModel:nil];
+}
+
+- (instancetype)initWithViewModel:(id)ViewModel {
+    return [self initWithFrame:CGRectZero ViewModel:ViewModel];
+}
+
+- (instancetype)initWithFrame:(CGRect)frame ViewModel:(id)viewModel {
+    if (self = [super initWithFrame:frame]) {
+        [self selfInit];
+        [self createSubView];
+        _viewModel = viewModel;
+        [self setupdata];
+        [self bindViewModel];
+    }
+    return self;
+}
+
+- (void)selfInit{
+    self.backgroundColor =  k_view_backColor;
+}
+- (void)createSubView{
+    
+    
+    [self tableView];
+    
+}
+
+- (void)setupdata{
+}
+
+- (void)bindViewModel{
+    // 处理试图刷新
+    __weak __typeof__(self) weakSelf = self;
+    
+    [self.viewModel.reloadSubject subscribeNext:^(id  _Nullable x) {
+        [weakSelf.tableView reloadData];
+        
+    }];
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DB47203E-8C38-4B43-A81E-4DCD98631AB2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>initWithViewModel</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>initWithViewModel</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

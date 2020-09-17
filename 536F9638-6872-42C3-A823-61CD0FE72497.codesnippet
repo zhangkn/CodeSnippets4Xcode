@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_line_y</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (UILabel *)lineLab{
+    if (nil == _lineLab) {
+        UILabel *tmpView = [[UILabel alloc]init];
+        _lineLab = tmpView;
+        [self addSubview:_lineLab];
+        tmpView.backgroundColor = k_tableView_Line;
+        
+        __weak __typeof__(self) weakSelf = self;
+        [_lineLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.top.equalTo(weakSelf.leftColletionMoneyView);
+            make.height.equalTo(weakSelf.leftColletionMoneyView).offset(kAdjustRatio(-50));
+//            make.height.equalTo(weakSelf.leftColletionMoneyView).dividedBy(1);
+
+//            make.height.mas_equalTo(kAdjustRatio(10));
+
+            make.width.mas_equalTo(LineH);
+            
+            
+            
+
+            make.centerX.equalTo(weakSelf).offset(kAdjustRatio(0));
+//            make.right.equalTo(weakSelf).offset(kAdjustRatio(-0));
+            make.centerY.equalTo(weakSelf.leftColletionMoneyView);
+        }];
+        
+    }
+    return _lineLab;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>536F9638-6872-42C3-A823-61CD0FE72497</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_line_y</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_line_y</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

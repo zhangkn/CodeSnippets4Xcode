@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_STModal</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (STModal *)modal{
+    if (!_modal) {
+        _modal = [STModal modalWithContentView:self.cashView];
+        _modal.positionMode = STModelPositionCenter;
+        _modal.dimBackgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.5];
+        _modal.hideWhenTouchOutside = YES;
+        
+        
+    }
+    return _modal;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5E263B74-B874-48CE-8168-549BDD433EBA</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_STModal</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_STModal</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

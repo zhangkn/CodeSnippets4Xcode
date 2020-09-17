@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_GET</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSString *getURL = k_API_EquipmentCommon_GetEquipmentModelSelect;
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    
+    [params setValue:@"1" forKey:@"State"];
+    
+    
+    
+    
+    [QCTNetworkHelper GET:getURL parameters:params success:^(id  _Nonnull responseObj) {
+        NSLog(@"k_API_Member_BindingMemberShipCard %@",responseObj);
+        //            alias = "\U9759\U6001\U7801\U724c_\U7acb\U724c\U7248";
+//        iconUrl = "&lt;null&gt;";
+//        text = "QM01_\U7acb\U724c\U7248";
+//        type = 7;
+//        typeC = "\U9759\U6001\U7801\U724c";
+//        value = 7;
+
+//        [modelArr addObject:@{@"type" : bl , @"count" : @"0" , @"img" : imgArr[i] , @"name" : nameArr[i]}];
+
+        
+        
+        NSMutableArray *tmparr = responseObj[@"data"];
+        
+        
+//        self-&gt;modelArr = [NSMutableDictionary dictionaryWithDictionary:];
+        // 循环重名了
+        self-&gt;modelArr = [NSMutableArray array];
+        for (NSDictionary * obj in tmparr) {
+            
+            
+            
+            NSMutableDictionary *tmp = [NSMutableDictionary dictionaryWithDictionary:obj];
+            
+            
+            [tmp setValue:[tmp valueForKey:@"value"]  forKey:@"value"];
+
+            [tmp setValue:[tmp valueForKey:@"text"]  forKey:@"name"];
+            [tmp setValue:[tmp valueForKey:@"iconUrl"]  forKey:@"img"];
+
+            
+            [tmp setValue:@"0"  forKey:@"count"];
+            [tmp setValue:@"2"  forKey:@"buysModel"];
+
+            
+//            []
+            [self-&gt;modelArr addObject:tmp];
+            
+            
+            
+        }
+        
+        
+        
+        
+        [self.tableView reloadData];
+//        // 绑定成功
+//
+//        [LBAlertController showAlertTitle:nil content:responseObj[GYQmessage] cancelString:nil cancleBlock:^{
+//
+//        }
+//                               sureString:@"确定" sureBlock:^{
+//
+//
+//                                   // 回到详情界面
+//
+//
+//                               }
+//                        currentController:[QCT_Common getCurrentVC]];
+//
+        
+        
+    } failure:nil bizFailure:nil isShowLoadingDataGif:YES];
+    
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DC1C4EAC-AE68-4CF6-ADD3-5178F620898C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_GET</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_GET</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_POST_Btn</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        __weak __typeof__(self) weakSelf = self;
+
+        NSString *getURL = k_API_PurchaseOrder_CreatePurchaseOrder;
+        
+        NSMutableDictionary *params = [NSMutableDictionary dictionary];
+        
+
+        
+        [QCTNetworkHelper Post:getURL parameters:params success:^(id  _Nonnull responseObj) {
+            NSLog(@"k_API_PurchaseOrder_CreatePurchaseOrder %@",responseObj);
+            
+            
+            
+//            NSMutableArray *tmparr = responseObj[@"data"];
+            
+            
+            // 跳转到带审核界面
+            
+            [weakSelf setupQCTResultSucess];
+//            QCTApplyViewController *vc = [[QCTApplyViewController alloc] init];
+//
+//            [weakSelf.navigationController pushViewController:vc animated:NO];
+//
+            
+            
+            
+            
+        }
+         
+//                       failure:nil bizFailure:nil isShowLoadingDataGif:YES];
+        
+         
+                       failure:^(NSError * _Nonnull error) {
+                           NSLog(@"%@",error.userInfo);
+                           UIAlertView *al = [[UIAlertView alloc]initWithTitle:@"" message:@"加载失败 请稍后重试" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                           
+                           
+                           [al show];
+                           self.payBtn.userInteractionEnabled = YES;
+                           
+                           
+                           
+                       } bizFailure:^(id  _Nonnull responseObj) {
+                           
+                           UIAlertView *al = [[UIAlertView alloc]initWithTitle:@"" message:responseObj[@"message"] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+                           [al show];
+                           self.payBtn.userInteractionEnabled = YES;
+                           
+                           
+                       } isShowLoadingDataGif:YES];
+        
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>49D52AF6-BD48-4C15-AAAD-638AF6F04637</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_POST_Btn</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_POST_Btn</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

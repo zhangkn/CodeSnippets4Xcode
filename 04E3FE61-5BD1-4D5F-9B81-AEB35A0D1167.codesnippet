@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_cellM</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;//去掉选中效果
+        
+        
+        [self selfInit];
+        [self createSubView];
+        [self bindViewModel];
+        
+        
+    }
+    return self;
+}
+
+- (void)bindViewModel {
+}
+
+- (void)selfInit{
+    
+    self.contentView.backgroundColor = kcellColor;
+    
+}
+
+- (void)createSubView {
+    [self cellView];
+}
+
+
+static NSString *identifier = @"&lt;##&gt;";//QCTCheckOutViewcellSection4topTableViewCell
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView{
+    
+    &lt;##&gt; *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {// ------并不会执行
+        
+        cell = [[&lt;##&gt; alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+    }
+    return cell;
+}
+
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView   block:(void (^)(id sender))block  models:(id) models {
+    &lt;##&gt; *cell  = [self  tableViewCellWithTableView:tableView];
+    
+    if (block) {
+        cell.block = block;
+    }
+    cell.models = models;
+    return cell;
+    
+}
+
+
+#pragma mark - ******** model
+
+- (void)setModels:( id)models{
+    _models =models;
+    
+//    self.cellView.models = models;
+}
+
+
+- (QCTCheckOutViewcellSection4topTableViewCellView *)cellView{
+    if (nil == _cellView) {
+        QCTCheckOutViewcellSection4topTableViewCellView *tmpView = [[QCTCheckOutViewcellSection4topTableViewCellView alloc]init];
+        _cellView = tmpView;
+        
+        [tmpView setBackgroundColor:kcellColor];
+        
+        [self.contentView addSubview:_cellView];
+        
+        __weak __typeof__(self) weakSelf = self;
+        [_cellView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.equalTo(weakSelf.contentView).offset(kAdjustRatio(20));
+            make.right.equalTo(weakSelf.contentView).offset(- kAdjustRatio(20));
+            make.top.equalTo(weakSelf.contentView).offset(kAdjustRatio(0));
+            
+            make.bottom.equalTo(weakSelf.contentView).offset(kAdjustRatio(0));
+            
+            
+        }];
+    }
+    return _cellView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>04E3FE61-5BD1-4D5F-9B81-AEB35A0D1167</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>cellM</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>cellM</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

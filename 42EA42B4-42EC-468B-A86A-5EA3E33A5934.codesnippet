@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>/**
+ 限制UITextField只能输入金额的正则表达式
+ [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewEditChanged:) name:UITextFieldTextDidChangeNotification object:moneyTextField];
+ */
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    
+    NSInteger len = range.length &gt; 0?([textField.text length] - range.length): ([textField.text length] + [string length]);
+    
+    if(len &gt; 20){
+        return false;
+    }
+    ////
+    NSString * str = [NSString stringWithFormat:@"%@%@",textField.text,string];
+    
+    return [QCT_Common isAmoutshouldChangeCharactersInRange:str];
+    
+    
+    
+    
+}
+
+// 监听文本改变
+-(void)textViewEditChanged:(NSNotification *)obj{
+    
+    UITextField *textField = (UITextField *)obj.object;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>42EA42B4-42EC-468B-A86A-5EA3E33A5934</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

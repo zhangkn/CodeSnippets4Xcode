@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_cellViewM</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;//去掉选中效果
+        
+        
+        [self selfInit];
+        [self createSubView];
+        [self bindViewModel];
+        
+        
+    }
+    return self;
+}
+
+- (void)bindViewModel {
+}
+
+- (void)selfInit{
+    
+    self.contentView.backgroundColor = kcellColor;
+    
+}
+
+- (void)createSubView {
+    [self cellView];
+}
+
+
+static NSString *identifier = @"QCTSelectaNewProductTableViewCell";//QCTCheckOutViewcellSection4topTableViewCell
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView{
+    
+    QCTSelectaNewProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {// ------并不会执行
+        
+        cell = [[[self class] alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+    }
+    return cell;
+}
+
++ (instancetype) tableViewCellWithTableView:(UITableView *) tableView   block:(void (^)(id sender))block  models:(id) models {
+    QCTSelectaNewProductTableViewCell *cell  = [self  tableViewCellWithTableView:tableView];
+    
+    if (block) {
+        cell.block = block;
+    }
+    cell.models = models;
+    return cell;
+    
+}
+
+
+#pragma mark - ******** model
+
+- (void)setModels:( id)models{
+    _models =models;
+    
+    self.cellView.models = models;
+}
+- (QCTQCTSelectaNewProductTableViewCellView *)cellView{
+    if (nil == _cellView) {
+        QCTQCTSelectaNewProductTableViewCellView *tmpView = [[QCTQCTSelectaNewProductTableViewCellView alloc]init];
+        _cellView = tmpView;
+        
+        [tmpView setBackgroundColor:kcellColor];
+        
+        [self.contentView addSubview:_cellView];
+        
+        __weak __typeof__(self) weakSelf = self;
+        [_cellView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            make.left.equalTo(weakSelf.contentView).offset(kAdjustRatio(25));
+            make.right.equalTo(weakSelf.contentView).offset(- kAdjustRatio(25));
+            make.top.equalTo(weakSelf.contentView).offset(kAdjustRatio(0));
+            
+            make.bottom.equalTo(weakSelf.contentView).offset(kAdjustRatio(0));
+            
+            
+        }];
+    }
+    return _cellView;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3AE2E9B4-BAEA-4091-845F-EA2010C23A36</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_cellViewM</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

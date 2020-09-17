@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_reloadSubject</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (RACSubject *)reloadSubject{
+    if (!_reloadSubject) {
+        _reloadSubject = [[RACSubject alloc]init];
+    }
+    return _reloadSubject;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>CC8FD3B9-4736-4F92-8CEE-3770E0E03B2D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>reloadSubject</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>reloadSubject</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

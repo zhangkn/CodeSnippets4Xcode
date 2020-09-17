@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_is_selected</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSPredicate* predicate = [NSPredicate predicateWithFormat:@"isSelected == %d",YES];
+    
+    
+    NSMutableArray *tmparr = [self.viewModel.datas filteredArrayUsingPredicate:predicate];
+    
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>74D01EFB-E7C6-44E8-9A02-46EC8D422C49</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_is_selected</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_is_selected</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

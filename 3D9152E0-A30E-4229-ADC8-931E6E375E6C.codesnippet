@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_addNOtifObserser</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:QCTupdateHangOrdersNumNotification object:nil] subscribeNext:^(NSNotification *notification) {
+        
+        
+        [weakSelf.viewModel.reloadDropDownMenuSubject sendNext:nil];
+        
+    }];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D9152E0-A30E-4229-ADC8-931E6E375E6C</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_addNOtifObserser</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_addNOtifObserser</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

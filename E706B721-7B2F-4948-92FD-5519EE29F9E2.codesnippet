@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_RACObserve</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>        [RACObserve([QCTShoppingCartListView shareQCTShoppingCartListView ],orderNum ) subscribeNext:^(id x) {
+            //            self.navigationItem.title = [NSString stringWithFormat:@"挂单(%@)",x];
+            
+            [weakSelf setupOrderNum:[x integerValue] ];
+        }];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E706B721-7B2F-4948-92FD-5519EE29F9E2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_RACObserve</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_RACObserve</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

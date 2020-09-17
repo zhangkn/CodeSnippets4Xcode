@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>KN_tab</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+    
+    UINavigationBar.appearance().backgroundColor = UIColor.white;
+    
+    //274472
+    UINavigationBar.appearance().barTintColor = UIColor(red: 39/255.0, green: 68/255.0, blue: 114/255.0, alpha: 1);
+    
+    
+    UIApplication.shared.isStatusBarHidden = true;
+    
+    
+    
+    
+    let tab = UITabBarController.init();
+    
+    
+    let sb = UIStoryboard(name: "Main", bundle: nil)
+    let vc = sb.instantiateViewController(withIdentifier: "mathNav") as! UINavigationController
+//    vc.navigationBar.isHidden = true
+    
+    
+    //d8b8c6
+    
+    let sborder = UIStoryboard(name: "fibMain", bundle: nil)
+    let vcsborder = sborder.instantiateViewController(withIdentifier: "fibNav") as! M2ViewController
+    //       M2ViewController.h vcsborder.navigationController?.navigationBar.isHidden = true
+    
+//    vcsborder.tabBarItem.title = "Maths Quiz";
+    vcsborder.tabBarItem.title = "Practice Fibonacci sequence";
+
+    vcsborder.tabBarItem.image = UIImage(named: "Icon-App-29x29")?.withRenderingMode(.alwaysOriginal)
+    vcsborder.tabBarItem.selectedImage = UIImage(named: "Icon-App-29x29")?.withRenderingMode(.alwaysOriginal)
+    
+    vc.tabBarItem.title = "Maths Quiz";
+
+    
+    
+    
+    vc.tabBarItem.image = UIImage(named: "icon-29")?.withRenderingMode(.alwaysOriginal)
+    vc.tabBarItem.selectedImage = UIImage(named: "icon-29")?.withRenderingMode(.alwaysOriginal)
+    
+    tab.addChild(vc);
+    tab.addChild(vcsborder);
+//
+    tab.tabBar.tintColor =  UIColor(red: 209/255.0, green: 130/255.0, blue: 249/255.0, alpha: 1);
+    tab.tabBar.backgroundColor = tab.tabBar.tintColor;
+//
+    self.window = UIWindow()
+    self.window?.frame = UIScreen.main.bounds
+    
+    
+    
+    
+    self.window?.rootViewController = tab;
+    
+    
+    
+    self.window?.makeKeyAndVisible();
+    
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>750010DD-C1EC-493C-86D2-E5C041737FE1</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_tab</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_tab</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

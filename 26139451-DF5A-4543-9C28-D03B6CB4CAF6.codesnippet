@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string></string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>            //static NSString *ERPReturnV4Refundable_amountidentifier = @"ERPReturnV4Refundable_amount";
+
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ERPReturnV4Refundable_amountidentifier];
+
+            
+            
+            if (cell == nil) {// ------并不会执行
+                
+                
+                 cell  = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ERPReturnV4Refundable_amountidentifier];
+                
+                
+                
+
+                
+            }
+            
+            NSString *detailTextLabeltext = [NSString stringWithFormat:@"可退金额 %@",[QCT_Common getAmountStr:self.viewModel.payinfomodel.refundable_amount] ];
+            
+            
+            
+            //test
+            
+            cell.detailTextLabel.numberOfLines = 2;
+            
+            cell.detailTextLabel.text = detailTextLabeltext;
+            
+            cell.detailTextLabel.textColor = BASE_RED_COLOR;
+            
+            
+            
+            
+            
+            
+            return cell;
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>26139451-DF5A-4543-9C28-D03B6CB4CAF6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>KN_syscell</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>KN_syscell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

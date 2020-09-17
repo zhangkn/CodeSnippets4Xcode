@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>kn_getV</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (&lt;#type#&gt; *)&lt;#name#&gt;{
+    if (nil == _&lt;#name#&gt;) {
+        &lt;#type#&gt; *tmpView = [[&lt;#type#&gt; alloc]init];
+        _&lt;#name#&gt; = tmpView;
+        [self addSubview:_&lt;#name#&gt;];
+        
+        __weak __typeof__(self) weakSelf = self;
+        [tmpView mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            
+        }];
+        
+
+    }
+    return _&lt;#name#&gt;;
+}
+
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>33C31603-D603-46A6-88EF-B4D549F9106A</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>kn_getV单利创建视图：kn_getV</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>kn_getV单利创建视图：kn_getV</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
